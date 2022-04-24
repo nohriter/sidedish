@@ -1,0 +1,13 @@
+# application-develop1.yml
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/sidedish?&characterEncoding=UTF-8&serverTimeZone=Asia/Seoul
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: team-31
+  sql:
+    init:
+      mode: always
+      schema-locations: sql/schema.sql
+      data-locations: sql/data.sql
+
