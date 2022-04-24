@@ -1,9 +1,11 @@
+# application-prod.yml
 spring:
   datasource:
-    url: jdbc:mysql://52.78.175.50:3306/sideDish?&characterEncoding=UTF-8&serverTimeZone=Asia/Seoul
+    url: ${MYSQL_DATABASE_URL}
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: norwhi
-    password: nori123456
+    username: ${MYSQL_DATABASE_USERNAME}
+    password: ${MYSQL_DATABASE_PASSWORD}
   sql:
     init:
+      mode: always
       schema-locations: classpath:sql/schema.sql
