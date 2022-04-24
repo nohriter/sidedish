@@ -1,3 +1,9 @@
 spring:
-  profiles:
-    active : ${profile}
+  datasource:
+    url: jdbc:mysql://52.78.175.50:3306/sideDish?&characterEncoding=UTF-8&serverTimeZone=Asia/Seoul
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: norwhi
+    password: nori123456
+  sql:
+    init:
+      schema-locations: classpath:sql/schema.sql
